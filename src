@@ -43,3 +43,15 @@ WHERE FirstName LIKE ‘[^a-f]%’
 WHERE FirstName LIKE ‘[^adj]%’
 --Para registros que no contengan estas letras en el primer caracter
 
+
+--Ejemplo DE LIKE
+--Listar los nombres de los estudiantes cuyo apellido comience con la letra G
+
+SELECT Nombre
+FROM Estudiante
+WHERE nombre LIKE ‘*G*’
+
+--(observación:   el primer * es el nombre, luego de un espacio en blanco viene G y luego cualquier expresión
+
+
+

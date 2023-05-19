@@ -1,0 +1,45 @@
+--Función LIKE SINTAXIS 
+
+SELECT [columnas] FROM [tabla] WHERE [columna] LIKE [patrón];
+
+--Esto no se limita a consultas con SELECT sino que incluye el update de sql y la clasula delete.
+WHERE phone_number LIKE ‘55%’ 
+
+--Para códigos de área en el telefono que empiecen con 55
+WHERE phone_number NOT LIKE ‘55%’ 
+
+--Devuelve todos los telefonos que su codigo de área no empiece con 55
+WHERE LastName LIKE ‘%br%’
+--Para todos los apellidos que contengan br, sin importar que caracteres tengan antes o despúes
+
+--Carácter comodín _ (guión bajo)
+
+--Para verificar un sólo caracter
+WHERE FirstName LIKE ‘_en’ 
+--Le indica que el primer caracter puede ser lo que sea y el resto de ellos debe ser ‘en’
+
+WHERE Phone_Numer LIKE ‘6_2%’
+--Le indica que el codigo de area debe empezar con 6 y terminar con 2 y existen caracteres adicionales con %
+
+
+--Usando los corchetes [ ]
+--Se utiliza cuando se quiere verificar rango
+
+WHERE FirstName LIKE ‘[a-f]%’
+--El primer caracter de FirstName empiece con a-f 
+
+WHERE FirstName LIKE ‘[CS] heryl ‘
+--Para devolver los nombres de Cheryl o Sheryl
+
+WHERE FirstName LIKE ‘Zh[ae]ng’
+--Devolver registros de Zhang o Zheng
+
+--Usando los corchetes [^]
+--Se utiliza cuando se quiere NEGAR la verificación de un rango 
+
+WHERE FirstName LIKE ‘[^a-f]%’
+--Se utiliza cuando se quiere el primer caracter que no este en el rango de la a-f
+
+WHERE FirstName LIKE ‘[^adj]%’
+--Para registros que no contengan estas letras en el primer caracter
+
